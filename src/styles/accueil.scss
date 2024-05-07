@@ -5,6 +5,7 @@
 
 // Je code sur accueil puis dispatche par la suite
 
+
 * {
     box-sizing: border-box;
 }
@@ -95,12 +96,14 @@ main {
                     opacity: 1;
                 }
             }
-            animation-delay: 0.1s; /* L'h2 commence à glisser légèrement après le h1 */
+
+            animation-delay: 0.1s;
+            /* L'h2 commence à glisser légèrement après le h1 */
         }
 
         p {
             font-size: 2rem;
-            color: rgba(190,50,37,255);
+            color: rgba(190, 50, 37, 255);
 
             @keyframes slideInFromLeft {
                 0% {
@@ -115,7 +118,9 @@ main {
                     opacity: 1;
                 }
             }
-            animation-delay: 0.2s; /* Le paragraphe suit, créant un effet de séquence */
+
+            animation-delay: 0.2s;
+            /* Le paragraphe suit, créant un effet de séquence */
         }
 
         h2,
@@ -129,6 +134,53 @@ main {
             animation-timing-function: ease-out;
             /* Rend l'animation plus naturelle */
 
+        }
+    }
+
+    
+
+    .vision {
+        background-color: rgba(0, 0, 0, 0.685);
+        padding: 5rem 950px;
+        margin-top: 2rem;
+        text-align: center;
+
+        @keyframes shine {
+            0%, 100% { filter: brightness(5); }
+            50% { filter: brightness(50) sepia(100%); }
+            // 50% {filter: brightness(6) saturate(15); }
+        }
+
+        span {
+            color: #ff7e2a;
+            font-weight: bold;
+        }
+
+        &__p1 {
+            color: white;
+            font-size: 30px;
+            margin-bottom: 2rem;
+        }
+
+        &__p2 {
+            color: white;
+            font-size: 23px;
+        }
+
+        &__card {
+            display: inline-block;
+            color: white;
+            font-size: 20px;
+            margin-top: 2rem;
+            padding: 0 50px;
+
+            img {
+                height: 100px;
+                animation-name: shine; // ou flicker selon l'effet choisi
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;  
+            }
         }
     }
 }
