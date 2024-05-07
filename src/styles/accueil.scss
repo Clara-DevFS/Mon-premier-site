@@ -43,7 +43,7 @@ body::after {
         opacity: .7;
         padding: 1rem 0;
         padding-left: 15rem;
-        border-radius: 95% 5% 5% 95% / 50% 50% 50% 50% ;
+        border-radius: 95% 5% 5% 95% / 50% 50% 50% 50%;
     }
 }
 
@@ -52,20 +52,83 @@ main {
         text-align: center;
         font-size: 4rem;
         color: white;
-        background-color: rgba(0, 0, 0, 0.685);
+        // background-color: rgba(0, 0, 0, 0.685);
         padding: 4rem;
         margin-bottom: 1rem;
         text-shadow: rgba(21, 23, 29, 0.699) 7px 10px;
+
+        /* Propriétés d'animation */
+        animation-name: fadeInBackground;
+        animation-duration: 5s;
+        /* Durée de 2 secondes pour l'animation */
+        animation-fill-mode: forwards;
+        /* Garde la dernière keyframe après l'animation */
+
+        @keyframes fadeInBackground {
+            from {
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            to {
+                background-color: rgba(0, 0, 0, 0.685);
+            }
+        }
     }
 
     .main__title {
         text-align: center;
+
         h2 {
             font-size: 3rem;
             font-weight: bold;
+
+            @keyframes slideInFromLeft {
+                0% {
+                    transform: translateX(-700px);
+                    /* Départ de 700px à gauche de la position initiale */
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateX(0);
+                    /* Arrive à la position normale */
+                    opacity: 1;
+                }
+            }
+            animation-delay: 0.1s; /* L'h2 commence à glisser légèrement après le h1 */
         }
+
         p {
             font-size: 2rem;
+            color:rgb(127,69,65);
+
+            @keyframes slideInFromLeft {
+                0% {
+                    transform: translateX(-700px);
+                    /* Départ de 700px à gauche de la position initiale */
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateX(0);
+                    /* Arrive à la position normale */
+                    opacity: 1;
+                }
+            }
+            animation-delay: 0.2s; /* Le paragraphe suit, créant un effet de séquence */
+        }
+
+        h2,
+        p {
+            /* Propriétés d'animation */
+            animation-name: slideInFromLeft;
+            animation-duration: 3s;
+            /* Durée de l'animation */
+            animation-fill-mode: forwards;
+            /* Garde le style du dernier état de keyframe */
+            animation-timing-function: ease-out;
+            /* Rend l'animation plus naturelle */
+
         }
     }
 }
