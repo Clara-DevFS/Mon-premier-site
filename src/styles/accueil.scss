@@ -59,7 +59,7 @@ main {
 
         /* Propriétés d'animation */
         animation-name: fadeInBackground;
-        animation-duration: 5s;
+        animation-duration: 6s;
         /* Durée de 2 secondes pour l'animation */
         animation-fill-mode: forwards;
         /* Garde la dernière keyframe après l'animation */
@@ -100,7 +100,7 @@ main {
 
         p {
             font-size: 2rem;
-            color:rgb(127,69,65);
+            color: rgba(190,50,37,255);
 
             @keyframes slideInFromLeft {
                 0% {
