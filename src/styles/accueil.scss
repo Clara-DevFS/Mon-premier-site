@@ -35,6 +35,16 @@ body::after {
 .header__nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    &2 {
+        background: rgba(21, 23, 29, 0.452);
+        background: linear-gradient(241deg, rgba(21, 23, 29, 0.699) 0%, rgba(161, 62, 55, 0.534) 61%, rgba(213, 71, 49, 0.39) 100%);
+        opacity: .7;
+        padding: 1rem 0;
+        padding-left: 15rem;
+        border-radius: 95% 5% 5% 95% / 50% 50% 50% 50% ;
+    }
 }
 
 main {
@@ -44,12 +54,15 @@ main {
         color: white;
         background-color: rgba(0, 0, 0, 0.685);
         padding: 4rem;
+        margin-bottom: 1rem;
+        text-shadow: rgba(21, 23, 29, 0.699) 7px 10px;
     }
 
     .main__title {
         text-align: center;
         h2 {
             font-size: 3rem;
+            font-weight: bold;
         }
         p {
             font-size: 2rem;
