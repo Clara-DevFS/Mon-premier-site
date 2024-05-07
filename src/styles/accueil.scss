@@ -1,0 +1,57 @@
+@use 'global.scss';
+@use 'mixin.scss';
+@use 'var.scss';
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    margin: 0;
+    height: 100vh; // Assure que le body prend au moins toute la hauteur de la fenêtre
+    overflow: hidden; // Empêche tout débordement causé par le pseudo-élément 
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/img/phoenix2.jpg");
+    background-size: cover; // Couvre toute la zone disponible
+    background-repeat: no-repeat;
+    opacity: 0.2; // Ajustez cette valeur selon vos besoins
+    z-index: -1; // Place l'image de fond derrière le contenu du body
+    background-position: center;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.685);
+        padding: 4rem;
+    }
+
+    .main__title {
+        text-align: center;
+        h2 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+}
