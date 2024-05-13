@@ -8,14 +8,15 @@
 
 * {
     box-sizing: border-box;
+    margin: auto;
 }
 
 html,
 body {
     position: relative;
     margin: 0;
-    height: 100vh; // Assure que le body prend au moins toute la hauteur de la fenêtre
-    overflow: hidden; // Empêche tout débordement causé par le pseudo-élément 
+    // height: 100vh; // Assure que le body prend au moins toute la hauteur de la fenêtre
+    overflow: auto; // Empêche tout débordement causé par le pseudo-élément 
 }
 
 body::after {
@@ -141,7 +142,7 @@ main {
 
     .vision {
         background-color: rgba(0, 0, 0, 0.685);
-        padding: 5rem 950px;
+        padding: 2rem 20%;
         margin-top: 2rem;
         text-align: center;
 
@@ -177,7 +178,7 @@ main {
             img {
                 height: 100px;
                 animation-name: shine; // ou flicker selon l'effet choisi
-                animation-duration: 5s;
+                animation-duration: 3s;
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-in-out;  
             }
